@@ -27,4 +27,13 @@ Route::group([
     Route::post('/signin', 'UserController@login')->name('user.login');
 
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
+
+    Route::group(['middleware' => ['auth']], function() {
+        Route::get('/protected-1', function() {
+            return 'protected-1';
+        })->name('protected-1');
+        Route::get('/protected-2', function() {
+            return 'protected-2';
+        })->name('protected-2');
+    });
 });

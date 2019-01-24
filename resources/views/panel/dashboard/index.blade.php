@@ -49,5 +49,17 @@
         </div>
     </div>
     @endif
+    <div class="row">
+        <div class="col-12">
+            <ul>
+                <li>
+                    <a href="{{ route('panel.protected-1') }}">Protegida 1</a>
+                </li>
+                <li>
+                    <a href="{{ route('panel.protected-2') }}">Protegida 2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 @endsection
