@@ -15,3 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group([
+    'as' => 'panel.',
+    'namespace' => 'Panel',
+    'prefix' => 'panel'
+], function() {
+    Route::get('/register', 'UserController@register')->name('register');
+});
