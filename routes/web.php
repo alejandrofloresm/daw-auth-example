@@ -20,5 +20,8 @@ Route::group([
     'namespace' => 'Panel',
     'prefix' => 'panel'
 ], function() {
-    Route::get('/register', 'UserController@register')->name('register');
+    Route::get('/register', 'UserController@register')->name('user.register');
+    Route::post('/register', 'UserController@create')->name('user.create');
+
+    Route::get('/', 'DashboardController@index')->name('dashboard.index');
 });
