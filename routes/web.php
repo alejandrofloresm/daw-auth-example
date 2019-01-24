@@ -22,6 +22,7 @@ Route::group([
 ], function() {
     Route::get('/register', 'UserController@register')->name('user.register');
     Route::post('/register', 'UserController@create')->name('user.create');
+    Route::get('/logout', 'UserController@logout')->name('user.logout');
 
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
 });

@@ -21,7 +21,11 @@ class UserController extends BaseController {
         $userData['password'] = Hash::make($userInput['password']);
         $user = User::create($userData);
         Auth::login($user);
-        return redirect()
-            ->route('panel.dashboard.index');
+        return redirect()->route('panel.dashboard.index');
+    }
+
+    public function logout(Request $req) {
+        Auth::logout();
+        return redirect()->route('panel.dashboard.index');
     }
 }
