@@ -24,6 +24,7 @@ Route::group([
     Route::post('/register', 'UserController@create')->name('user.create');
     Route::get('/logout', 'UserController@logout')->name('user.logout');
     Route::get('/signin', 'UserController@signin')->name('user.signin');
+    Route::post('/signin', 'UserController@login')->name('user.login');
 
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
 });

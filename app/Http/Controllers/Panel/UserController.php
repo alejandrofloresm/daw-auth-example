@@ -32,4 +32,12 @@ class UserController extends BaseController {
     public function signin(Request $req) {
         return view('panel.user.signin');
     }
+
+    public function login(Request $req) {
+        $userInput = $req->input('user');
+        if (Auth::attempt($userInput)) {
+            return redirect()->route('panel.dashboard.index');
+        }
+        return redirect()->route('panel.user.signin');
+    }
 }

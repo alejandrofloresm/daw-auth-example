@@ -1,7 +1,7 @@
 @extends('panel.layouts.unregistered')
 
 @section('content')
-<form class="form-signin" method="POST" action="{{ route('panel.user.create') }}">
+<form class="form-signin" method="POST" action="{{ route('panel.user.login') }}">
     @csrf
     <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
