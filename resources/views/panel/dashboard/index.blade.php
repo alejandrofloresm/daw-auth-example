@@ -35,6 +35,19 @@
             </table>
         </div>
     </div>
+    @else
+    <div class="row">
+        <div class="col-12">
+            <ul>
+                <li>
+                    <a href="{{ route('panel.user.signin') }}">Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="{{ route('panel.user.register') }}">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     @endif
 </div>
 @endsection

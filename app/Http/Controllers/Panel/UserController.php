@@ -28,4 +28,8 @@ class UserController extends BaseController {
         Auth::logout();
         return redirect()->route('panel.dashboard.index');
     }
+
+    public function signin(Request $req) {
+        return view('panel.user.signin');
+    }
 }
